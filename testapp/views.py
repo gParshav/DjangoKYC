@@ -11,16 +11,7 @@ import cv2
 
 def index(request):
     print(1)
-    return HttpResponse("Europe Trips")
-
-def my_view(request):
-    if request.method == 'POST':
-        data = json.loads(request.body)
-        my_model = Trip(origin=data['origin'], destination=data['destination'], price=data['price'], nights=data['nights'])
-        my_model.save()
-        return JsonResponse({'status': 'success'})
-    return JsonResponse({'status': 'error'})
-
+    return HttpResponse("Django KYC")
 
 def compare_images(request):
     if request.method == 'POST':
